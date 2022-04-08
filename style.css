@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/*Police Shrikhand*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*Police Roboto*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", "sans-serif";
+}
+
+body {
+  counter-reset: steps;
+  /* On initialise le compteur à 0 */
+}
+
+header h1 {
+  font-weight: bold;
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.4rem;
+  box-shadow: 0 0 5px 0 grey;
+  position: relative;
+}
+
+.location {
+  display: flex;
+  gap: 0.9rem;
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.location p {
+  font-weight: 900;
+  color: rgb(48, 48, 48);
+}
+
+.research {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  background-color: rgba(230, 230, 230, 0.5);
+  align-items: center;
+}
+.research h2 {
+  padding: 0.8rem 2rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.research p {
+  padding-bottom: 1.5rem;
+  font-weight: 100;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.research button {
+  padding: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 33px;
+  box-shadow: 0px 15px 10px -13px grey;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+}
+.research button:hover {
+  cursor: pointer;
+}
+
+.how-to {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  min-width: 80%;
+}
+.how-to h3 {
+  padding-top: 1.4rem;
+  padding-bottom: 1.6rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+.how-to .how-to-instructions-container {
+  /*A METTRE EN DESKTOP SEULEMENT pour s'assurer que les li ne prennent pas toute la place : ils se concentrent au milieu de la page
+  align-itms: center;*/
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.how-to .how-to-instructions-container li:before {
+  content: counter(steps);
+  counter-increment: steps;
+  font-size: 0.8rem;
+  font-weight: 100;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+  display: grid;
+  place-items: center;
+  margin-left: -2rem;
+}
+.how-to .instructions-cards {
+  display: flex;
+  gap: 1rem;
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+}
+.how-to .instructions-cards i {
+  color: grey;
+}
+
+.restaurants {
+  padding: 1.5rem;
+  background-color: rgba(230, 230, 230, 0.5);
+}
+.restaurants h4 {
+  padding-top: 1.8rem;
+  padding-bottom: 1.6rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+/*# sourceMappingURL=style.css.map */
