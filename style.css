@@ -135,6 +135,12 @@ header h1 {
   box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
   position: relative;
 }
+.restaurants .card:hover {
+  cursor: pointer;
+  transform: scale(1.003);
+  box-shadow: 0px 15px 10px -13px rgb(200, 200, 200);
+  transition: ease-in-out 80ms;
+}
 .restaurants .card .new {
   position: absolute;
   top: 0.7rem;
@@ -165,12 +171,20 @@ header h1 {
 .restaurants .card .description .name {
   font-weight: 700;
 }
-.restaurants .card .description .menu__like--noBg {
+.restaurants .card .description .fa-heart {
   position: absolute;
-  right: 0.7rem;
-  bottom: 1rem;
-  top: 1rem;
-  color: #9356DC;
+  right: 1rem;
+  top: 1.4rem;
+}
+.restaurants .card .description .fa-solid {
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.restaurants .card .description .fa-solid:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
