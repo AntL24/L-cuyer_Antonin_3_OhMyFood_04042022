@@ -130,13 +130,68 @@ header h1{
     }
 }
 .restaurants{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
     padding: 1.5rem;
     background-color: rgb(230, 230, 230, .5);
     h4{
         padding-top: 1.8rem;
         padding-bottom: 1.6rem;
         font-weight: 900;
-        font-size: 1.4rem;
+        font-size: 1.4rem;       
     }
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
 
+        //relative important pour permettre le positionnement de l'étiquette .new
+        position: relative;
+        .new{ 
+            //position de l'étiquette "nouveau" en haut à droite des cards 
+            position: absolute;
+            top: 0.7rem;
+            right:0.7rem;
+
+            //couleur des étiquettes "nouveau"
+            background-color: $vert;
+            color: $vert-sombre;
+
+            font-size: 0.8rem;
+            font-weight: 500;
+
+            //taille, bords ronds et placement du texte au centre avec grid
+            text-align: center;
+            display: grid;
+            place-items: center;
+            width: 4.5rem;
+            height: 1.8rem;
+            border-radius: 0.1rem;
+        }
+        .illustration{
+            object-fit: cover;
+            object-position: center;
+            max-height: 10rem;
+            border-radius: 1rem 1rem 0 0;
+
+        }
+        .description{
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+            padding: 1rem;
+            position: relative;
+            .name{
+                font-weight: 700;
+            }
+            .menu__like--noBg{
+
+                position: absolute;
+                right:0.7rem;
+                bottom:1rem;
+                top:1rem;
+                color: $violet;
+            }
+        }
+    }
 }

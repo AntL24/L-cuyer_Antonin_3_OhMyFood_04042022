@@ -117,6 +117,9 @@ header h1 {
 }
 
 .restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
   padding: 1.5rem;
   background-color: rgba(230, 230, 230, 0.5);
 }
@@ -125,6 +128,49 @@ header h1 {
   padding-bottom: 1.6rem;
   font-weight: 900;
   font-size: 1.4rem;
+}
+.restaurants .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+  position: relative;
+}
+.restaurants .card .new {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  background-color: #99EDD0;
+  color: #456d60;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 1.8rem;
+  border-radius: 0.1rem;
+}
+.restaurants .card .illustration {
+  object-fit: cover;
+  object-position: center;
+  max-height: 10rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurants .card .description {
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+  position: relative;
+}
+.restaurants .card .description .name {
+  font-weight: 700;
+}
+.restaurants .card .description .menu__like--noBg {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 1rem;
+  top: 1rem;
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
