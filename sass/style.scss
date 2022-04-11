@@ -4,7 +4,10 @@
 @import'colors&font';
 
 *{font-family: $text-font;}
-
+a{
+    color:inherit;
+    text-decoration: inherit;
+}
 body {
     counter-reset: steps;                    /* On initialise le compteur à 0 */
   }
@@ -19,7 +22,7 @@ header h1{
     box-shadow: 0 0 5px 0 grey;
     position: relative;
 }
-//Paris locasion font awesome icone
+//Paris location font awesome icone
 .location{
     display: flex;
     gap: 0.9rem;
@@ -209,6 +212,8 @@ header h1{
                 //l'animation se fait par un changement d'opacité quand on hover l'icone coeur (l'icone pleine vaut 0 par défaut, et passe à 1 quand on hover avec la souris, pour apparaitre
                 &:hover{
                     opacity: 1;
+                    transition-duration: 120ms;
+                    transition-timing-function: ease-in;
                 }
             }
         }

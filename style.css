@@ -8,6 +8,11 @@
   font-family: "Roboto", "sans-serif";
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 body {
   counter-reset: steps;
   /* On initialise le compteur à 0 */
@@ -185,6 +190,8 @@ header h1 {
 }
 .restaurants .card .description .fa-solid:hover {
   opacity: 1;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */
