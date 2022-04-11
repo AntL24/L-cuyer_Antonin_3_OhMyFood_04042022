@@ -213,24 +213,79 @@ footer section p {
   padding: 0.4rem 0;
 }
 
-.starter {
+header {
+  position: relative;
+}
+header .logo-and-back-button {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+}
+header .logo-and-back-button .logo {
+  margin: auto;
+}
+header .logo-and-back-button h6 {
+  font-size: 1.4rem;
+  font-family: "Shrikhand", "cursive";
+}
+
+.restaurant-menu {
+  position: absolute;
+  width: 100%;
+  margin-top: -2rem;
+  border-radius: 2rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 5rem 0;
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
 }
-.starter .food-button {
+.restaurant-menu h7 {
+  font-size: 1.4rem;
+  font-family: "Shrikhand", "cursive";
+}
+.restaurant-menu .restaurant-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+.restaurant-menu .restaurant-name .fa-heart {
+  position: absolute;
+  right: 1rem;
+  top: 1.4rem;
+}
+.restaurant-menu .restaurant-name .fa-solid {
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.restaurant-menu .restaurant-name .fa-solid:hover {
+  opacity: 1;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
+}
+.restaurant-menu h8 {
+  text-transform: uppercase;
+}
+.restaurant-menu .food-button {
+  background-color: white;
+  border: 3px red solid;
   display: flex;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
   overflow: hidden;
 }
-.starter .food-button .food-name {
+.restaurant-menu .food-button .food-name {
   display: flex;
   flex-direction: column;
   padding: 0.75rem 1rem;
 }
-.starter .food-button .food-price {
+.restaurant-menu .food-button .food-price {
   padding: 0.75rem 1rem;
   display: flex;
   align-items: flex-end;
@@ -238,7 +293,7 @@ footer section p {
   color: rgb(70, 70, 70);
   font-weight: 700;
 }
-.starter .food-button .checkbox-slider {
+.restaurant-menu .food-button .checkbox-slider {
   display: grid;
   place-items: center;
   background-color: #99EDD0;
@@ -246,7 +301,7 @@ footer section p {
   width: 4rem;
   border-radius: 0 1rem 1rem 0;
 }
-.starter .food-button .checkbox-slider i {
+.restaurant-menu .food-button .checkbox-slider i {
   display: grid;
   place-items: center;
   background-color: white;
@@ -256,12 +311,12 @@ footer section p {
   aspect-ratio: 1/1;
   transform: rotate(-170deg);
 }
-.starter .food-button:hover .checkbox-slider {
+.restaurant-menu .food-button:hover .checkbox-slider {
   transition: ease-in;
   transition-duration: 500ms;
   margin-right: 0;
 }
-.starter .food-button:hover i {
+.restaurant-menu .food-button:hover i {
   transition: ease-in;
   transition-duration: 500ms;
   transform: rotate(0deg);

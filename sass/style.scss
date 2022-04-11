@@ -213,7 +213,8 @@ header h1{
                 &:hover{
                     opacity: 1;
                     transition-duration: 120ms;
-                    transition-timing-function: ease-in;
+                    transition-timing-function: ease-in;                   
+
                 }
             }
         }
@@ -229,16 +230,16 @@ footer{
     padding-bottom: 2rem;
     padding-left: 1.5rem;
 
-    h5{
-        font-family: $headers-font;
-        font-size: 1.4rem;       
-        padding: 1.5rem 0 ;
-    }
-    p{
-        //display block pour que le hover effect n'apparaisse pas sur toute la ligne
-        display: block;
-        padding:0.4rem 0;
-    }
+        h5{
+            font-family: $headers-font;
+            font-size: 1.4rem;       
+            padding: 1.5rem 0 ;
+        }
+        p{
+            //display block pour que le hover effect n'apparaisse pas sur toute la ligne
+            display: block;
+            padding:0.4rem 0;
+        }
     }
 }
 
@@ -247,16 +248,95 @@ footer{
 
 
 //pages restaurants======================================================
-.starter{
+
+header{
+    position: relative;
+    .logo-and-back-button{
+        padding: 0.75rem;
+        display: flex;
+        //align item pour centrer la flèche de gauche
+        align-items: center;
+        background-color: rgb(230, 230, 230);
+        .logo{   
+            //margin auto pour placer le logo au centre
+            margin: auto;
+
+        }
+        h6{
+            font-size: 1.4rem;
+            font-family: $headers-font;
+        }
+    }
+}
+.restaurant-menu{
+    //position absolute pour placer le main au-dessus de l'img du header (lui-même en relative),
+    //et width 100% pour maintenir le main sur toute la page (sans cela, il réduit).
+    position: absolute;
+    width:100%;
+    margin-top: -2rem;
+    border-radius: 2rem;
+    gap: 1rem;
+
+    //affichage en colonnes des entrées plats et desserts.
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
+
+    background-color: rgb(230, 230, 230);
+
+
+    padding: 1rem;
+
+    h7{
+        font-size: 1.4rem;
+        font-family: $headers-font;
+    }
+
+    .restaurant-name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+
+        //animation du coeur comme sur la page d'accueil
+
+        .fa-heart{
+            //position des deux coeurs l'un sur l'autre à droite
+            position: absolute;
+            right:1rem;
+            top:1.4rem;
+
+        }
+        .fa-solid{
+            //background-clip text permet de sélectionner l'icone uniquement pour appliquer background-image sur le coeur. Color transparent nécessaire (sinon, c'est la couleur de l'icone ou du texte qui apparait)
+            background-image: linear-gradient(to top right, $rose, $violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity:0;
+
+            //l'animation se fait par un changement d'opacité quand on hover l'icone coeur (l'icone pleine vaut 0 par défaut, et passe à 1 quand on hover avec la souris, pour apparaitre
+            &:hover{
+                opacity: 1;
+                transition-duration: 120ms;
+                transition-timing-function: ease-in;                   
+            }
+        }   
+    }
+
+    h8{
+        text-transform:uppercase;
+
+    }
+
     .food-button{
+        background-color: white;
+        border: 3px red solid;
         display: flex;
         border-radius: 1rem;
         box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
         overflow: hidden;
+
 
    
         .food-name{
@@ -311,4 +391,5 @@ footer{
         }
     }
 }
+
 
