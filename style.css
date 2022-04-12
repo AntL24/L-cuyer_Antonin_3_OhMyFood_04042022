@@ -213,9 +213,6 @@ footer section p {
   padding: 0.4rem 0;
 }
 
-header {
-  position: relative;
-}
 header .logo-and-back-button {
   padding: 0.75rem;
   display: flex;
@@ -230,11 +227,13 @@ header .logo-and-back-button h6 {
   font-family: "Shrikhand", "cursive";
 }
 
+.background-img {
+  margin-bottom: -2rem;
+}
+
 .restaurant-menu {
-  position: absolute;
-  width: 100%;
-  margin-top: -2rem;
-  border-radius: 2rem;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
   gap: 1rem;
   display: flex;
   flex-direction: column;
@@ -272,9 +271,14 @@ header .logo-and-back-button h6 {
 .restaurant-menu h8 {
   text-transform: uppercase;
 }
+.restaurant-menu h8:after {
+  border-bottom: 3px solid #99EDD0;
+  content: "";
+  display: block;
+  width: 20%;
+}
 .restaurant-menu .food-button {
   background-color: white;
-  border: 3px red solid;
   display: flex;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
@@ -284,6 +288,19 @@ header .logo-and-back-button h6 {
   display: flex;
   flex-direction: column;
   padding: 0.75rem 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.restaurant-menu .food-button .food-name h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.restaurant-menu .food-button .food-name p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restaurant-menu .food-button .food-price {
   padding: 0.75rem 1rem;
@@ -300,6 +317,7 @@ header .logo-and-back-button h6 {
   margin-right: -4rem;
   width: 4rem;
   border-radius: 0 1rem 1rem 0;
+  transition: all 0.5s ease-out;
 }
 .restaurant-menu .food-button .checkbox-slider i {
   display: grid;
@@ -310,16 +328,32 @@ header .logo-and-back-button h6 {
   width: 2rem;
   aspect-ratio: 1/1;
   transform: rotate(-170deg);
+  transition: all 0.5s ease-out;
 }
 .restaurant-menu .food-button:hover .checkbox-slider {
-  transition: ease-in;
-  transition-duration: 500ms;
+  transition: all 0.5s ease-out;
   margin-right: 0;
 }
 .restaurant-menu .food-button:hover i {
-  transition: ease-in;
-  transition-duration: 500ms;
+  transition: all 0.5s ease-out;
   transform: rotate(0deg);
+}
+.restaurant-menu .buying-button {
+  display: flex;
+  justify-content: center;
+}
+.restaurant-menu .buying-button button {
+  padding: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 33px;
+  box-shadow: 0px 15px 10px -13px grey;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+}
+.restaurant-menu .buying-button button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

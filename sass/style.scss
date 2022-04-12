@@ -250,7 +250,6 @@ footer{
 //pages restaurants======================================================
 
 header{
-    position: relative;
     .logo-and-back-button{
         padding: 0.75rem;
         display: flex;
@@ -268,13 +267,14 @@ header{
         }
     }
 }
+.background-img{
+    //marge négative pour attirer la section restaurant-menu au-dessus de l'image
+    margin-bottom: -2rem;
+}
 .restaurant-menu{
-    //position absolute pour placer le main au-dessus de l'img du header (lui-même en relative),
-    //et width 100% pour maintenir le main sur toute la page (sans cela, il réduit).
-    position: absolute;
-    width:100%;
-    margin-top: -2rem;
-    border-radius: 2rem;
+    //position relative pour placer le main au-dessus de l'img du header
+    position: relative;
+    border-radius: 2rem 2rem 0 0;
     gap: 1rem;
 
     //affichage en colonnes des entrées plats et desserts.
@@ -305,6 +305,7 @@ header{
             position: absolute;
             right:1rem;
             top:1.4rem;
+            
 
         }
         .fa-solid{
@@ -314,7 +315,7 @@ header{
             -webkit-background-clip: text;
             color: transparent;
             opacity:0;
-
+            
             //l'animation se fait par un changement d'opacité quand on hover l'icone coeur (l'icone pleine vaut 0 par défaut, et passe à 1 quand on hover avec la souris, pour apparaitre
             &:hover{
                 opacity: 1;
@@ -323,15 +324,20 @@ header{
             }
         }   
     }
-
+    //Entrées, plats, desserts en lettres capitale et pseudo-élément after pour afficher une border bottom partielle
     h8{
         text-transform:uppercase;
-
     }
+    h8:after {
+        border-bottom: 3px solid $vert;
+        content: '';
+        display: block;
+        width: 20%;
+      }
+
 
     .food-button{
         background-color: white;
-        border: 3px red solid;
         display: flex;
         border-radius: 1rem;
         box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
@@ -343,18 +349,30 @@ header{
             display: flex;
             flex-direction: column;
             padding: 0.75rem 1rem;
-
+            //ellipse du texte quand l'animation "checkbox-slider" apparait et que l'on manque d'espace
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            h2{    
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            }
+            p{ 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            }
         }
         .food-price{
             padding: 0.75rem 1rem;
             display: flex;
             align-items: flex-end;
             margin-left: auto;
-
-        color: rgb(70, 70, 70);
-        font-weight: 700;}
-
-        //
+            color: rgb(70, 70, 70);
+            font-weight: 700;
+        }
+        //création de la checkbox cachée à droite des plats
         .checkbox-slider{
             display: grid;
             place-items: center;
@@ -362,9 +380,8 @@ header{
             margin-right: -4rem;
             width: 4rem;
             border-radius: 0 1rem 1rem 0;
-
-
-
+            //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
+            transition: all 0.5s ease-out;
             i{
                 display: grid;
                 place-items: center;
@@ -374,20 +391,38 @@ header{
                 width: 2rem;
                 aspect-ratio: 1/1;
                 transform: rotate(-170deg);
-                
-
+                //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
+                transition: all 0.5s ease-out;
             }
         }
+    //animation checkbox quand on passe la souris où que ce soit sur le plat
     &:hover .checkbox-slider{
-        transition: ease-in;
-        transition-duration: 500ms;
+        transition: all 0.5s ease-out;
         margin-right: 0;
-
-
         }
-        &:hover i{    
-            transition: ease-in;
-            transition-duration: 500ms;  transform: rotate(0deg);
+        &:hover i{
+            transition: all 0.5s ease-out;
+            transform: rotate(0deg);
+        }
+    }
+    //bouton de commande
+    .buying-button{
+        //on centre sur la page
+        display: flex;
+        justify-content: center;
+        //on met en forme
+        button{
+            padding: 1.1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 33px;
+            box-shadow: 0px 15px 10px -13px grey;    
+            background: linear-gradient(to right bottom, $rose, $violet);
+            border: none;
+            color: white;
+            &:hover{
+                cursor:pointer;
+            }
         }
     }
 }
