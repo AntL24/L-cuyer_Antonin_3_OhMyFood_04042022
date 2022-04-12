@@ -326,13 +326,15 @@ header{
     }
     //Entrées, plats, desserts en lettres capitale et pseudo-élément after pour afficher une border bottom partielle
     h8{
+        padding-top: 1rem;
         text-transform:uppercase;
     }
     h8:after {
         border-bottom: 3px solid $vert;
         content: '';
         display: block;
-        width: 20%;
+        padding-top: 0.3rem;
+        width: 2.5rem;
       }
 
 
@@ -412,7 +414,8 @@ header{
         justify-content: center;
         //on met en forme
         button{
-            padding: 1.1rem;
+            padding: 0.60rem 1.5rem;
+            margin: 2rem 0;
             font-weight: 600;
             font-size: 1rem;
             border-radius: 33px;
