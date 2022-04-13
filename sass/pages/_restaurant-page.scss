@@ -72,7 +72,7 @@
     }
 
 }
-    //container qui sert à timer les animations de plats/dessert/entrées
+//container qui sert à décaler les animations de plats/dessert/entrées
 .entrées-container, .plats-container, .desserts-container{
     gap: 1rem;
     display: flex;
