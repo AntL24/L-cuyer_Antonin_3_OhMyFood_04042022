@@ -1,0 +1,47 @@
+
+//==============================================================================//
+//animation checkbox slider quand on passe la souris où que ce soit sur le plat=//
+//==============================================================================//
+
+//checkbox cachée à droite des plats
+.food-button{
+    .checkbox-slider{
+    //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
+        transition: all 0.5s ease-out;
+        i{
+            transform: rotate(-170deg);
+            //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
+            transition: all 0.5s ease-out;
+            }
+        }
+    //animation checkbox quand on passe la souris où que ce soit sur le plat
+    &:hover .checkbox-slider{
+        transition: all 0.5s ease-out;
+        margin-right: 0;
+    }
+    &:hover i{
+        transition: all 0.5s ease-out;
+        transform: rotate(0deg);
+    }
+}
+
+//====================================================//
+//Animation fa-heart rose violet changement d'opacité=//
+//====================================================//
+
+.description .fa-solid{
+    //background-clip text permet de sélectionner l'icone uniquement pour appliquer background-image sur le coeur. Color transparent nécessaire (sinon, c'est la couleur de l'icone ou du texte qui apparait)
+    background-image: linear-gradient(to top right, $rose, $violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity:0;
+    transition-duration: 120ms;
+    transition-timing-function: ease-in;    
+&:hover{
+        opacity: 1;
+        transition-duration: 120ms;
+        transition-timing-function: ease-in;                   
+    }
+}
+

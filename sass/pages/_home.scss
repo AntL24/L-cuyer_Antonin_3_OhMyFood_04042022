@@ -1,0 +1,139 @@
+*{font-family: $text-font;}
+
+a{
+    color:inherit;
+    text-decoration: inherit;
+}
+
+body {
+    counter-reset: steps;                    /* On initialise le compteur à 0 */
+}
+
+//main 
+.how-to{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 4rem 1.5rem;
+    min-width: 80%;
+    h3{
+        padding-top: 1.4rem;
+        padding-bottom: 1.6rem;
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+    .how-to-instructions-container{
+        //A METTRE EN DESKTOP SEULEMENT pour s'assurer que les li
+        //ne prennent pas toute la place : ils se concentrent au milieu de la page
+        //align-itms: center;*/
+
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        li:before {
+            content: counter(steps);
+            counter-increment: steps;
+
+            //style du counter
+            font-size: 0.8rem;
+            font-weight: 100;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            color: white;
+            background-color: $violet;
+
+            //placer counter au centre du cercle
+            display: grid;
+            place-items: center;
+
+            //placer cercle au milieu de la border left
+            margin-left: -2rem;
+        } 
+    }
+    .instructions-cards{
+        display: flex;
+        gap: 1rem;
+        background-color: rgb(230, 230, 230, .5);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+        i{
+            color: grey;
+        }
+    }
+}
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 1.5rem;
+    background-color: rgb(230, 230, 230, .5);
+    h4{
+        padding-top: 1.8rem;
+        padding-bottom: 1.6rem;
+        font-weight: 900;
+        font-size: 1.4rem;       
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+        //curseur pointeur et grossissement de la case avec un délai ease-in-out
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.003);
+            box-shadow:  0px 15px 10px -13px rgb(200, 200, 200);
+            transition: ease-in-out 80ms;
+        }
+
+        //relative important pour permettre le positionnement de l'étiquette .new
+        position: relative;
+        .new{ 
+            //position de l'étiquette "nouveau" en haut à droite des cards 
+            position: absolute;
+            top: 0.7rem;
+            right:0.7rem;
+
+            //couleur des étiquettes "nouveau"
+            background-color: $vert;
+            color: $vert-sombre;
+
+            font-size: 0.8rem;
+            font-weight: 500;
+
+            //taille, bords ronds et placement du texte au centre avec grid
+            text-align: center;
+            display: grid;
+            place-items: center;
+            width: 4.5rem;
+            height: 1.8rem;
+            border-radius: 0.1rem;
+        }
+        .illustration{
+            object-fit: cover;
+            object-position: center;
+            max-height: 10rem;
+            border-radius: 1rem 1rem 0 0;
+
+        }
+        .description{
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+            padding: 1rem;
+            position: relative;
+            .name{
+                font-weight: 700;
+            }
+            .fa-heart{
+                //position des deux coeurs l'un sur l'autre à droite
+                position: absolute;
+                right:1rem;
+                top:1.4rem;
+            }
+            
+        }
+    }
+}
+

@@ -1,0 +1,96 @@
+//=================================================================//
+//Dans les pages de restaurant : boutons avec noms, descriptions, prix
+//des plats (qui s'effacent pour former une ellipse si manque d'espace avec le slider)
+//=================================================================//
+.food-button{
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
+    overflow: hidden;
+    .food-name{
+        display: flex;
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+        //Ellipse du texte quand l'animation "checkbox-slider"
+        //apparait et que l'on manque d'espace
+        //avec overflow, text-overflow et white-space.
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        h2{    
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        }
+        p{ 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        }
+    }
+    .food-price{
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: flex-end;
+        margin-left: auto;
+        color: rgb(70, 70, 70);
+        font-weight: 700;
+    }
+}
+
+//========================================================//
+//création de la checkbox slider cachée à droite des plats
+//(voir fichier _animation pour l'animation en elle-même)
+//========================================================//
+
+.checkbox-slider{
+    display: grid;
+    place-items: center;
+    background-color: $vert;
+    margin-right: -4rem;
+    width: 4rem;
+    border-radius: 0 1rem 1rem 0;
+    //transition pour que le retour à la position initiale
+    //*après le hover* se fasse progressivement
+    transition: all 0.5s ease-out;
+    i{
+        display: grid;
+        place-items: center;
+        background-color: white;
+        color: $vert;
+        border-radius: 2rem;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        transform: rotate(-170deg);
+        //transition pour que le retour à la position initiale
+        //*après le hover* se fasse progressivement
+        transition: all 0.5s ease-out;
+    }
+}
+
+//==========================================//
+//=Sur les deux styles de pages : forme des=//
+//bouton "explorer" et "commander"==========//
+//==========================================//
+
+ button{
+     padding: 0.5rem 1.1rem;
+     min-height: 2.5rem;
+     font-weight: 600;
+     font-size: 1rem;
+     border-radius: 33px;
+     box-shadow: 0px 15px 10px -13px grey;    
+     background: linear-gradient(to right bottom, $rose, $violet);
+     border: none;
+     color: white;
+     &:hover{
+         cursor:pointer;
+    }  
+}
+//bouton "commander" au centre de la page (+margin)
+.buying-button{
+    display: flex;
+    justify-content: center;
+    margin: 1.75rem 0;
+}

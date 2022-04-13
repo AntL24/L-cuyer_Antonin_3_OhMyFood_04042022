@@ -1,0 +1,90 @@
+
+//======================//
+//header page d'accueil //
+//======================//
+
+header{
+       h1{
+        font-weight: bold;
+        font-family: $headers-font;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0.4rem;
+        box-shadow: 0 0 5px 0 grey;
+        position: relative;
+        }
+    //Paris location font awesome icone
+    .location{
+        display: flex;
+        gap: 0.9rem;
+        background-color: rgb(230, 230, 230);
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-weight: 900;
+            color: rgb(48, 48, 48);
+        }
+    }
+    .research{
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 3rem 1.5rem;
+        background-color: rgb(230, 230, 230, .5);
+
+        //align item pour centrer le contenu "réservez le menu" etc au milieu de la page
+        align-items: center;
+
+        //Titre en gras Réserver
+        h2{
+            padding: 0.8rem 2rem;
+            font-weight: 900;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        //Paragraphe en minuscle Découvrez des restaurants
+        p{
+            padding-bottom: 1.5rem;
+            font-weight: 100;
+            font-size: 1.05rem;
+            text-align: center;
+        }
+
+    //Style des boutons
+    button{
+        padding: 1.1rem;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 33px;
+        box-shadow: 0px 15px 10px -13px grey;    
+        background: linear-gradient(to right bottom, $rose, $violet);
+        border: none;
+        color: white;
+        &:hover{
+            cursor:pointer;}
+        }
+    }
+}
+
+//============================//
+//header des pages restaurant=//
+//============================//
+
+header{
+    .logo-and-back-button{
+        padding: 0.75rem;
+        display: flex;
+        //align item pour centrer la flèche de gauche
+        align-items: center;
+        background-color: rgb(230, 230, 230);
+        .logo{   
+            //margin auto pour placer le logo au centre
+            margin: auto;
+        }
+        h6{
+            font-size: 1.4rem;
+            font-family: $headers-font;
+        }
+    }
+}
