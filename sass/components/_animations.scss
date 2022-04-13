@@ -55,7 +55,7 @@
 //changement d'opacité sur hover et ombre de couleur plus foncée//
 button:hover{
     opacity: 0.9;
-    box-shadow: 0px 15px 10px -13px rgb(31, 31, 31);
+    box-shadow: 0px 15px 10px -13px rgb(62, 62, 62);    
     transition: all 0.5s ease-out;
 }
 
@@ -65,6 +65,7 @@ button:hover{
 .bouncer-container{
     display: flex;
     height: 100vh;
+    width: 100%;
     background-color: white;
     position: fixed;
     //inset pour couvrir l'intégralité de l'écran
@@ -75,19 +76,13 @@ button:hover{
     //disparition
     animation: nodisplay 200ms 3s forwards;
     .lettre{
-   
     z-index:2;
-    width: 20px; height: 20px;
     animation: bouncer 0.5s cubic-bezier(.19,.57,.3,.98) infinite alternate;
     //gradient appliqué au texte de l'écran de chargement
     font-family: $headers-font;
-    background-color: $rose;
-    background-image: linear-gradient(45deg, $rose, $violet);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+    color: $violet;
+    letter-spacing: 1rem;
+    font-size: 2rem;
     }
 }
 @keyframes bouncer{
@@ -95,7 +90,6 @@ button:hover{
     }
     to {transform: translateY(-100px);
     }
-    
 }
 .lettre:nth-child(2){
     animation-delay: 0.1s;
@@ -130,4 +124,37 @@ button:hover{
 //=================================================//
 //Animation chargement progressif des food-buttons=//
 //=================================================//
+.restaurant-menu .food-button{
+    animation: progressive-menu 2s forwards;
+}
+.food-button:nth-child(2){
+    animation-delay: 0.1s;
+}
+.food-button:nth-child(3){
+    animation-delay: 0.2s;
+}
+.food-button:nth-child(4){
+    animation-delay: 0.3s;
+}
+.food-button:nth-child(5){
+    animation-delay: 0.4s;
+}
+.food-button:nth-child(6){
+    animation-delay: 0.5s;
+}
+.food-button:nth-child(7){
+    animation-delay: 0.6s;
+}
+.food-buttone:nth-child(8){
+    animation-delay: 0.7s;
+}
+@keyframes progressive-menu{
+    0%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 

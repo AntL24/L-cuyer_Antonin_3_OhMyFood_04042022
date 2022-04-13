@@ -50,20 +50,6 @@ header{
             font-size: 1.05rem;
             text-align: center;
         }
-
-    //Style des boutons
-    button{
-        padding: 1.1rem;
-        font-weight: 600;
-        font-size: 1rem;
-        border-radius: 33px;
-        box-shadow: 0px 15px 10px -13px grey;    
-        background: linear-gradient(to right bottom, $rose, $violet);
-        border: none;
-        color: white;
-        &:hover{
-            cursor:pointer;}
-        }
     }
 }
 
