@@ -2,7 +2,7 @@
     //marge négative pour attirer la section restaurant-menu au-dessus de l'image
     margin-bottom: -2rem;
 }
-.restaurant-menu{
+.restaurant-menu {
     //position relative pour placer le main au-dessus de l'img du header
     position: relative;
     border-radius: 2rem 2rem 0 0;
@@ -70,6 +70,14 @@
     .bold-title{
         font-weight: 900;
     }
+
+}
+    //container qui sert à timer les animations de plats/dessert/entrées
+.entrées-container, .plats-container, .desserts-container{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    opacity:0;
 }
 
 

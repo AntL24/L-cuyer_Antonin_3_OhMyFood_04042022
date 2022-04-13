@@ -124,33 +124,20 @@ button:hover{
 //=================================================//
 //Animation chargement progressif des food-buttons=//
 //=================================================//
-.restaurant-menu .food-button{
+.desserts-container, .plats-container, .entrées-container{
     animation: progressive-menu 2s forwards;
 }
-.food-button:nth-child(2){
-    animation-delay: 0.1s;
+.desserts-container{
+    animation-delay: 1s;
 }
-.food-button:nth-child(3){
-    animation-delay: 0.2s;
-}
-.food-button:nth-child(4){
-    animation-delay: 0.3s;
-}
-.food-button:nth-child(5){
-    animation-delay: 0.4s;
-}
-.food-button:nth-child(6){
+.plats-container{
     animation-delay: 0.5s;
 }
-.food-button:nth-child(7){
-    animation-delay: 0.6s;
-}
-.food-buttone:nth-child(8){
-    animation-delay: 0.7s;
-}
+
+
 @keyframes progressive-menu{
     0%{
-        transform: translateY(50%);
+        transform: translateY(30%);
     }
     100%{
         transform: translateY(0);
