@@ -16,13 +16,6 @@
         //apparait et que l'on manque d'espace
         //avec overflow, text-overflow et white-space.
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        h2{    
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        }
         p{ 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -50,10 +43,10 @@
     background-color: $vert;
     margin-right: -4rem;
     width: 4rem;
+    aspect-ratio: 1/1;
     border-radius: 0 1rem 1rem 0;
-    //transition pour que le retour à la position initiale
-    //*après le hover* se fasse progressivement
-    transition: all 0.5s ease-out;
+    //shrink à 0 pour conserver la taille du slider
+    flex-shrink: 0;
     i{
         display: grid;
         place-items: center;
@@ -63,9 +56,6 @@
         width: 2rem;
         aspect-ratio: 1/1;
         transform: rotate(-170deg);
-        //transition pour que le retour à la position initiale
-        //*après le hover* se fasse progressivement
-        transition: all 0.5s ease-out;
     }
 }
 

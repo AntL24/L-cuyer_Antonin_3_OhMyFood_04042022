@@ -102,13 +102,6 @@ footer section p {
   flex-direction: column;
   padding: 0.75rem 1rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.food-button .food-name h2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .food-button .food-name p {
   overflow: hidden;
@@ -130,8 +123,9 @@ footer section p {
   background-color: #99EDD0;
   margin-right: -4rem;
   width: 4rem;
+  aspect-ratio: 1/1;
   border-radius: 0 1rem 1rem 0;
-  transition: all 0.5s ease-out;
+  flex-shrink: 0;
 }
 .checkbox-slider i {
   display: grid;
@@ -142,7 +136,6 @@ footer section p {
   width: 2rem;
   aspect-ratio: 1/1;
   transform: rotate(-170deg);
-  transition: all 0.5s ease-out;
 }
 
 button {
@@ -197,6 +190,81 @@ button:hover {
   transition-timing-function: ease-in;
 }
 
+button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 15px 10px -13px rgb(31, 31, 31);
+  transition: all 0.5s ease-out;
+}
+
+.bouncer-container {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  animation: nodisplay 200ms 3s forwards;
+}
+.bouncer-container .lettre {
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  font-family: "Shrikhand", "cursive";
+  background-color: #FF79DA;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+.lettre:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+@keyframes nodisplay {
+  100% {
+    opacity: 0;
+    z-index: -100;
+    display: none;
+  }
+}
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -358,16 +426,19 @@ body {
   transition-duration: 120ms;
   transition-timing-function: ease-in;
 }
-.restaurant-menu h8 {
+.restaurant-menu h8, .restaurant-menu h9, .restaurant-menu h10 {
   padding-top: 1rem;
   text-transform: uppercase;
 }
-.restaurant-menu h8:after {
+.restaurant-menu h8:after, .restaurant-menu h9:after, .restaurant-menu h10:after {
   border-bottom: 3px solid #99EDD0;
   content: "";
   display: block;
   padding-top: 0.3rem;
   width: 2.5rem;
+}
+.restaurant-menu .bold-title {
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */
