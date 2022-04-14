@@ -348,17 +348,18 @@ body {
     display: flex;
     flex-direction: row;
   }
-}
-.restaurants {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr 1fr 1fr;
-  gap: 10px 10px;
-  grid-template-areas: ". ." ". .";
-}
-.restaurants h4 {
-  display: flex;
-  width: 100%;
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: ". ." ". .";
+  }
+  .restaurants h4 {
+    display: flex;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

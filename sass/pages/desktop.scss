@@ -11,17 +11,8 @@
         flex-direction: row;
         }
     } 
-    
-.restaurants{
-    
-        h4{
-           
-
-        }
-        >div{
-        }
-    }
-}
+//grid deux cards par rangée et trois colonnes (la première, fine, fait office
+//de séparation entre le h4 et la grid.
 .restaurants {
     h4{
         display: flex;
@@ -34,4 +25,5 @@
     grid-template-areas: 
       ". ."
       ". ."; 
+    }
 }
