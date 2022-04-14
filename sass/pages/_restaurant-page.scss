@@ -1,7 +1,17 @@
 .background-img{
     //marge négative pour attirer la section restaurant-menu au-dessus de l'image
     margin-bottom: -2rem;
+  
+
 }
+//positionnement et dimensionnement de l'image de couverture
+.restaurant-img{
+    object-fit: cover;
+    object-position: bottom;
+    max-height: 25vh;
+    width: 100%;
+}
+
 .restaurant-menu {
     //position relative pour placer le main au-dessus de l'img du header
     position: relative;
@@ -70,7 +80,6 @@
     .bold-title{
         font-weight: 900;
     }
-
 }
 //container qui sert à décaler les animations de plats/dessert/entrées
 .entrées-container, .plats-container, .desserts-container{
