@@ -76,6 +76,10 @@ footer section h5 {
 footer section p {
   padding: 0.4rem 0;
 }
+footer section p i {
+  padding-right: 0.8rem;
+  width: 2rem;
+}
 
 .food-button {
   background-color: white;
@@ -146,6 +150,136 @@ button:hover {
   margin: 1.75rem 0;
 }
 
+.food-button .checkbox-slider {
+  transition: all 0.5s ease-out;
+}
+.food-button .checkbox-slider i {
+  transform: rotate(-170deg);
+  transition: all 0.5s ease-out;
+}
+.food-button:hover .checkbox-slider {
+  transition: all 0.5s ease-out;
+  margin-right: 0;
+}
+.food-button:hover i {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+.food-button:hover {
+  cursor: pointer;
+}
+
+.description .fa-solid {
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
+}
+.description .fa-solid:hover {
+  opacity: 1;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 15px 10px -13px rgb(62, 62, 62);
+  transition: all 0.5s ease-out;
+}
+
+.bouncer-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  animation: nodisplay 200ms 3s forwards;
+}
+.bouncer-container .lettre {
+  z-index: 2;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  font-family: "Shrikhand", "cursive";
+  color: #9356DC;
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+.lettre:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+@keyframes nodisplay {
+  100% {
+    opacity: 0;
+    z-index: -100;
+    display: none;
+  }
+}
+.desserts-container, .plats-container, .entrées-container {
+  animation: progressive-menu 2s forwards;
+}
+
+.desserts-container {
+  animation-delay: 1s;
+}
+
+.plats-container {
+  animation-delay: 0.5s;
+}
+
+@keyframes progressive-menu {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -203,6 +337,18 @@ body {
 }
 .how-to .instructions-cards i {
   color: grey;
+}
+.how-to .last-instructions-card {
+  display: flex;
+  gap: 1rem;
+  background-color: #f1e1ff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+}
+.how-to .last-instructions-card i {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -272,7 +418,7 @@ body {
 
 .restaurant-img {
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   max-height: 25vh;
   width: 100%;
 }
@@ -336,19 +482,13 @@ body {
   opacity: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
   .how-to {
-    padding: 1.5rem;
-    min-width: 100%;
-    border: 3px red solid;
-  }
-  .how-to .how-to-instructions-container {
     align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
+    justify-content: space-around;
   }
-
+}
+@media only screen and (min-width: 650px) {
   .restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -359,6 +499,76 @@ body {
   .restaurants h4 {
     display: flex;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .how-to {
+    padding: 1.5rem;
+    min-width: 100%;
+  }
+  .how-to .how-to-instructions-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .how-to .instructions-cards, .how-to .last-instructions-card {
+    width: 20rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .restaurant-menu .restaurant-name {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .restaurant-menu .restaurant-name .fa-regular {
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+  }
+
+  .restaurant-menu .restaurant-name .fa-solid {
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+  }
+
+  .restaurant-menu {
+    align-items: center;
+  }
+
+  .entrées-container, .plats-container, .desserts-container {
+    width: 60vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .food-button {
+    width: 100%;
+    height: 4rem;
+  }
+
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .desktop-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .entrées-container, .plats-container, .desserts-container {
+    width: 30vw;
+    height: 30vh;
+    margin: 1rem 0.5rem;
   }
 }
 

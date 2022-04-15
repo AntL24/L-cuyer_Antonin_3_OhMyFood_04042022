@@ -16,6 +16,12 @@ footer{
         }
         p{
             padding:0.4rem 0;
+            i{
+                padding-right: 0.8rem;
+                //on régularise la largeur pour s'assurer que l'écart
+                //entre l'icone et le texte est le même entre les deux lignes.
+                width: 2rem;
+            }
         }
     }
 }

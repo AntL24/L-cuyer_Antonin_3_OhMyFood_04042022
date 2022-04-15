@@ -24,6 +24,9 @@
         transition: all 0.5s ease-out;
         transform: rotate(0deg);
     }
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 //====================================================//
@@ -45,8 +48,13 @@
 &:hover{
         opacity: 1;
         transition-duration: 120ms;
-        transition-timing-function: ease-in;                   
+        transition-timing-function: ease-in;  
+        cursor: pointer;
     }
+}
+.fa-heart:hover{
+    cursor: pointer;
+
 }
 
 //============================================//
@@ -142,4 +150,3 @@ button:hover{
         opacity: 1;
     }
 }
-

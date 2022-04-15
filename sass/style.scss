@@ -7,12 +7,12 @@
 @import "./layout/_footer";
 //components: buttons & animation
 @import "./components/_buttons.scss";
-//@import "./components/_animations";
+@import "./components/_animations";
 //pages: home & restaurant
 @import "./pages/_home.scss";
 @import "./pages/_restaurant-page.scss";
-//desktop viewport
-@import "./pages/desktop.scss";
+//Desktop/tablet responsive
+@import "./pages/_responsive.scss";
 
 
 

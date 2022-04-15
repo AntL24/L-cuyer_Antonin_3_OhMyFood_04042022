@@ -1,0 +1,121 @@
+
+//=================================================//
+//Responsive homepage==============================//
+//=================================================//
+
+//tablettes:affichage des cases "how to" au centre de l'écran
+
+@media only screen and (min-width: 650px) and (max-width: 1000px){
+    .how-to{
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+//desktop et tablettes
+
+@media only screen and (min-width: 650px){
+//grid deux cards par rangée et trois colonnes (la première, fine, fait office
+//de séparation entre le h4 et la grid.
+.restaurants {
+    h4{
+        display: flex;
+        width: 100%;
+    }
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". ."
+      ". ."; 
+    }
+}
+
+//desktop seulement
+
+@media only screen and (min-width: 1000px){
+    .how-to{
+        padding: 1.5rem ;
+        min-width: 100%;
+
+    .how-to-instructions-container{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+
+        }
+    //dimensionnement égal sur toutes les instructions cards 
+    .instructions-cards, .last-instructions-card{
+        width: 20rem;
+        }
+    }
+}
+
+
+//=================================================//
+//Responsive restaurant page=======================//
+//=================================================//
+
+@media only screen and (min-width: 650px){
+    .restaurant-menu .restaurant-name {
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        //position relative pour positionner le coeur par rapport au nom du restaurant
+        position: relative;
+        }
+    .restaurant-menu .restaurant-name .fa-regular {
+        //position des deux coeurs l'un sur l'autre à droite
+        position: absolute;
+        right:-2rem;
+        top:0.5rem;
+    }
+    .restaurant-menu .restaurant-name .fa-solid {
+        //position des deux coeurs l'un sur l'autre à droite
+        position: absolute;
+        right:-2rem;
+        top:0.5rem;
+    } .restaurant-menu{
+    align-items: center;
+    }
+    .entrées-container, .plats-container, .desserts-container{
+        //on déclare une largeur pour les container,
+        //puis on demande au food-button de prendre 100%
+        //de cette largeur, pour régulariser les dimensions.
+        //Sans cela, les bouttons s'adaptent au texte qu'ils
+        //contiennent et prennent des tailles irrégulières.
+        width: 60vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        }
+        .food-button{
+        width: 100%;
+        //une hauteur fixe pour régulariser la taille des food-buttons
+        //sur le menu avec quatre entrées et trois plats/trois desserts
+        height: 4rem;
+        }
+        .desktop{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+}
+@media only screen and (min-width: 1000px){
+    //alignement du menu à l'horizontale
+    //.desktop permet, lui, d'afficher
+    //entrées/plats/desserts à la verticale.
+        .desktop-wrapper{
+            display: flex;
+            flex-direction: row;
+        }
+        .entrées-container, .plats-container, .desserts-container{
+        width: 30vw;
+        height: 30vh;
+        margin : 1rem 0.5rem;
+        }
+
+}
