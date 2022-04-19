@@ -35,7 +35,7 @@
 //Animation fa-heart rose violet changement d'opacité=//
 //====================================================//
 
-.description .fa-solid{
+.fa-solid{
     //background-clip text permet de sélectionner l'icone
     //uniquement pour appliquer background-image sur le coeur.
     //Color transparent nécessaire (sinon, c'est la couleur de
@@ -46,7 +46,7 @@
     color: transparent;
     opacity:0;
     transition-duration: 120ms;
-    transition-timing-function: ease-in;    
+    transition-timing-function: ease-in;  
 &:hover{
         opacity: 1;
         transition-duration: 120ms;
@@ -54,9 +54,8 @@
         cursor: pointer;
     }
 }
-.fa-heart:hover{
+.fa-regular:hover{
     cursor: pointer;
-
 }
 
 //============================================//

@@ -81,6 +81,75 @@ header .logo-and-back-button h6 {
   font-family: "Shrikhand", "cursive";
 }
 
+.food-button {
+  background-color: white;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
+  overflow: hidden;
+}
+.food-button .food-name {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+}
+.food-button .food-name p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.food-button .food-price {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  color: rgb(70, 70, 70);
+  font-weight: 700;
+}
+
+.checkbox-slider {
+  display: grid;
+  place-items: center;
+  background-color: #99EDD0;
+  margin-right: -4rem;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 0 1rem 1rem 0;
+  flex-shrink: 0;
+}
+.checkbox-slider i {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: #99EDD0;
+  border-radius: 2rem;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  transform: rotate(-170deg);
+}
+
+button {
+  padding: 0.5rem 1.1rem;
+  min-height: 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 33px;
+  box-shadow: 0px 15px 10px -13px grey;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.buying-button {
+  display: flex;
+  justify-content: center;
+  margin: 1.75rem 0;
+}
+
 .food-button .checkbox-slider {
   transition: all 0.5s ease-out;
 }
@@ -100,7 +169,7 @@ header .logo-and-back-button h6 {
   cursor: pointer;
 }
 
-.description .fa-solid {
+.fa-solid {
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -109,14 +178,14 @@ header .logo-and-back-button h6 {
   transition-duration: 120ms;
   transition-timing-function: ease-in;
 }
-.description .fa-solid:hover {
+.fa-solid:hover {
   opacity: 1;
   transition-duration: 120ms;
   transition-timing-function: ease-in;
   cursor: pointer;
 }
 
-.fa-heart:hover {
+.fa-regular:hover {
   cursor: pointer;
 }
 
@@ -211,75 +280,6 @@ button:hover {
     opacity: 1;
   }
 }
-.food-button {
-  background-color: white;
-  display: flex;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
-  overflow: hidden;
-}
-.food-button .food-name {
-  display: flex;
-  flex-direction: column;
-  padding: 0.75rem 1rem;
-  overflow: hidden;
-}
-.food-button .food-name p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.food-button .food-price {
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-  color: rgb(70, 70, 70);
-  font-weight: 700;
-}
-
-.checkbox-slider {
-  display: grid;
-  place-items: center;
-  background-color: #99EDD0;
-  margin-right: -4rem;
-  width: 4rem;
-  aspect-ratio: 1/1;
-  border-radius: 0 1rem 1rem 0;
-  flex-shrink: 0;
-}
-.checkbox-slider i {
-  display: grid;
-  place-items: center;
-  background-color: white;
-  color: #99EDD0;
-  border-radius: 2rem;
-  width: 2rem;
-  aspect-ratio: 1/1;
-  transform: rotate(-170deg);
-}
-
-button {
-  padding: 0.5rem 1.1rem;
-  min-height: 2.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 33px;
-  box-shadow: 0px 15px 10px -13px grey;
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  border: none;
-  color: white;
-}
-button:hover {
-  cursor: pointer;
-}
-
-.buying-button {
-  display: flex;
-  justify-content: center;
-  margin: 1.75rem 0;
-}
-
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -533,7 +533,7 @@ body {
     top: 0.5rem;
   }
 
-  .fa-heart {
+  .restaurant-menu .restaurant-name .fa-solid {
     position: absolute;
     right: -2rem;
     top: 0.5rem;
