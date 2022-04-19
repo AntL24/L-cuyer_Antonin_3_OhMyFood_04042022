@@ -151,18 +151,18 @@ button:hover {
 }
 
 .food-button .checkbox-slider {
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .food-button .checkbox-slider i {
-  transform: rotate(-170deg);
-  transition: all 0.5s ease-out;
+  transform: rotate(240deg);
+  transition: all 0.5s ease-in-out;
 }
 .food-button:hover .checkbox-slider {
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
   margin-right: 0;
 }
 .food-button:hover i {
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
   transform: rotate(0deg);
 }
 .food-button:hover {

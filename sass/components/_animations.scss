@@ -10,23 +10,23 @@
 .food-button {
     .checkbox-slider {
         //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
-        transition: all 0.5s ease-out;
+        transition: all 0.5s ease-in-out;
 
         i {
-            transform: rotate(-170deg);
+            transform: rotate(240deg);
             //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
-            transition: all 0.5s ease-out;
+            transition: all 0.5s ease-in-out;
         }
     }
 
     //animation checkbox quand on passe la souris où que ce soit sur le plat
     &:hover .checkbox-slider {
-        transition: all 0.5s ease-out;
+        transition: all 0.5s ease-in-out;
         margin-right: 0;
     }
 
     &:hover i {
-        transition: all 0.5s ease-out;
+        transition: all 0.5s ease-in-out;
         transform: rotate(0deg);
     }
 
