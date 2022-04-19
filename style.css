@@ -412,92 +412,6 @@ body {
   top: 1.4rem;
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1000px) {
-  .how-to {
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-@media only screen and (min-width: 650px) {
-  .restaurants {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas: ". ." ". .";
-  }
-  .restaurants h4 {
-    display: flex;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .how-to {
-    padding: 1.5rem;
-    min-width: 100%;
-  }
-  .how-to .how-to-instructions-container {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-  }
-  .how-to .instructions-cards, .how-to .last-instructions-card {
-    width: 20rem;
-  }
-}
-@media only screen and (min-width: 650px) {
-  .restaurant-menu .restaurant-name {
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .restaurant-menu .restaurant-name .fa-regular {
-    position: absolute;
-    right: -2rem;
-    top: 0.5rem;
-  }
-
-  .restaurant-menu .restaurant-name .fa-solid {
-    position: absolute;
-    right: -2rem;
-    top: 0.5rem;
-  }
-
-  .restaurant-menu {
-    align-items: center;
-  }
-
-  .entrées-container, .plats-container, .desserts-container {
-    width: 60vw;
-  }
-
-  .food-button {
-    width: 100%;
-    height: 4rem;
-  }
-
-  .desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .desktop-wrapper {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .entrées-container, .plats-container, .desserts-container {
-    width: 30vw;
-    margin: 0rem 0.5rem;
-  }
-}
 .background-img {
   margin-bottom: -2rem;
 }
@@ -568,6 +482,93 @@ body {
   display: flex;
   flex-direction: column;
   opacity: 0;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+  .how-to {
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: ". ." ". .";
+  }
+  .restaurants h4 {
+    display: flex;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .how-to {
+    padding: 1.5rem;
+    min-width: 100%;
+  }
+  .how-to .how-to-instructions-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .how-to .instructions-cards, .how-to .last-instructions-card {
+    width: 20rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .restaurant-menu .restaurant-name {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .restaurant-menu .restaurant-name .fa-regular {
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+  }
+
+  .fa-heart {
+    position: absolute;
+    right: -2rem;
+    top: 0.5rem;
+  }
+
+  .restaurant-menu {
+    align-items: center;
+  }
+
+  .entrées-container, .plats-container, .desserts-container {
+    width: 60vw;
+  }
+
+  .food-button {
+    width: 100%;
+    height: 4rem;
+  }
+
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .desktop-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .entrées-container, .plats-container, .desserts-container {
+    width: 30vw;
+    margin: 0rem 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
