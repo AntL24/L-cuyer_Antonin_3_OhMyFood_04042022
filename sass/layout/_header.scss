@@ -1,11 +1,11 @@
 //utils: variables
-@use "../sass_utils/variables" as *;
+@use "../sass_utils/variables"as *;
 //======================//
 //header page d'accueil //
 //======================//
 
-header{
-       h1{
+header {
+    h1 {
         font-weight: bold;
         font-family: $headers-font;
         font-size: 1.6rem;
@@ -13,21 +13,24 @@ header{
         padding: 0.4rem;
         box-shadow: 0 0 5px 0 grey;
         position: relative;
-        }
+    }
+
     //Paris location font awesome icone
-    .location{
+    .location {
         display: flex;
         gap: 0.9rem;
         background-color: rgb(230, 230, 230);
         padding: 1rem;
         align-items: center;
         justify-content: center;
-        p{
+
+        p {
             font-weight: 900;
             color: rgb(48, 48, 48);
         }
     }
-    .research{
+
+    .research {
         display: flex;
         flex-direction: column;
         padding: 1.5rem 1.5rem 3rem 1.5rem;
@@ -37,7 +40,7 @@ header{
         align-items: center;
 
         //Titre en gras Réserver
-        h2{
+        h2 {
             padding: 0.8rem 2rem;
             font-weight: 900;
             font-size: 1.4rem;
@@ -45,7 +48,7 @@ header{
         }
 
         //Paragraphe en minuscle Découvrez des restaurants
-        p{
+        p {
             padding-bottom: 1.5rem;
             font-weight: 100;
             font-size: 1.05rem;
@@ -58,18 +61,20 @@ header{
 //header des pages restaurant=//
 //============================//
 
-header{
-    .logo-and-back-button{
+header {
+    .logo-and-back-button {
         padding: 0.75rem;
         display: flex;
         //align item pour centrer la flèche de gauche
         align-items: center;
         background-color: rgb(230, 230, 230);
-        .logo{   
+
+        .logo {
             //margin auto pour placer le logo au centre
             margin: auto;
         }
-        h6{
+
+        h6 {
             font-size: 1.4rem;
             font-family: $headers-font;
         }

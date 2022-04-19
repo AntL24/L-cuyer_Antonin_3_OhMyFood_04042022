@@ -1,14 +1,15 @@
 //utils: variables
-@use "../sass_utils/variables" as *;
+@use "../sass_utils/variables"as *;
 
-.background-img{
+.background-img {
     //marge négative pour attirer la section restaurant-menu au-dessus de l'image
     margin-bottom: -2rem;
-  
+
 
 }
+
 //positionnement et dimensionnement de l'image de couverture
-.restaurant-img{
+.restaurant-img {
     object-fit: cover;
     object-position: center;
     max-height: 25vh;
@@ -30,12 +31,12 @@
 
     padding: 1rem;
 
-    h7{
+    h7 {
         font-size: 1.4rem;
         font-family: $headers-font;
     }
 
-    .restaurant-name{
+    .restaurant-name {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -44,36 +45,43 @@
 
         //animation du coeur comme sur la page d'accueil
 
-        .fa-heart{
+        .fa-heart {
             //position des deux coeurs l'un sur l'autre à droite
             position: absolute;
-            right:1rem;
-            top:1.4rem;
-            
+            right: 1rem;
+            top: 1.4rem;
+
 
         }
-        .fa-solid{
+
+        .fa-solid {
             //background-clip text permet de sélectionner l'icone uniquement pour appliquer background-image sur le coeur. Color transparent nécessaire (sinon, c'est la couleur de l'icone ou du texte qui apparait)
             background-image: linear-gradient(to top right, $rose, $violet);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            opacity:0;
-            
+            opacity: 0;
+
             //l'animation se fait par un changement d'opacité quand on hover l'icone coeur (l'icone pleine vaut 0 par défaut, et passe à 1 quand on hover avec la souris, pour apparaitre
-            &:hover{
+            &:hover {
                 opacity: 1;
                 transition-duration: 120ms;
-                transition-timing-function: ease-in;                   
+                transition-timing-function: ease-in;
             }
-        }   
+        }
     }
-    h8,h9,h10{
+
+    h8,
+    h9,
+    h10 {
         //Entrées, plats, desserts en lettres capitale et pseudo-élément after pour afficher une border bottom partielle
         padding-top: 3rem;
-        text-transform:uppercase;
+        text-transform: uppercase;
     }
-    h8:after, h9:after, h10:after {
+
+    h8:after,
+    h9:after,
+    h10:after {
         //trait vert sous entrée/plats/desserts
         border-bottom: 3px solid $vert;
         content: '';
@@ -81,19 +89,20 @@
         padding-top: 0.3rem;
         width: 2.5rem;
     }
-    .bold-title{
+
+    .bold-title {
         font-weight: 900;
     }
 }
+
 //container qui sert à décaler les animations de plats/dessert/entrées
-.entrées-container, .plats-container, .desserts-container{
-    padding-top:1rem;
+.entrées-container,
+.plats-container,
+.desserts-container {
+    padding-top: 1rem;
     padding-bottom: 1rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    opacity:0;
+    opacity: 0;
 }
-
-
-

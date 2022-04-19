@@ -1,35 +1,41 @@
 //utils: variables
-@use "../sass_utils/variables" as *;
+@use "../sass_utils/variables"as *;
 
-*{font-family: $text-font;}
+* {
+    font-family: $text-font;
+}
 
-a{
-    color:inherit;
+a {
+    color: inherit;
     text-decoration: inherit;
 }
 
 body {
-    counter-reset: steps;                    /* On initialise le compteur à 0 */
+    counter-reset: steps;
+    /* On initialise le compteur à 0 */
 }
 
 
 //main 
-.how-to{
+.how-to {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 1.5rem 4rem 1.5rem;
     min-width: 80%;
-    h3{
+
+    h3 {
         padding-top: 1.4rem;
         padding-bottom: 1.6rem;
         font-weight: 900;
         font-size: 1.4rem;
     }
-    .how-to-instructions-container{
+
+    .how-to-instructions-container {
         justify-content: center;
         display: flex;
         flex-direction: column;
         gap: 1.3rem;
+
         li:before {
             content: counter(steps);
             counter-increment: steps;
@@ -49,10 +55,10 @@ body {
 
             //placer cercle au milieu de la border left
             margin-left: -2rem;
-        } 
+        }
     }
-    
-    .instructions-cards{
+
+    .instructions-cards {
         display: flex;
         gap: 1rem;
         background-color: rgb(230, 230, 230, .5);
@@ -60,12 +66,14 @@ body {
         border-radius: 1rem;
         font-weight: 700;
         box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
-        i{
+
+        i {
             color: grey;
         }
 
     }
-    .last-instructions-card{
+
+    .last-instructions-card {
         display: flex;
         gap: 1rem;
         background-color: #f1e1ff;
@@ -73,43 +81,49 @@ body {
         border-radius: 1rem;
         font-weight: 700;
         box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
-        i{
+
+        i {
             color: $violet;
         }
 
     }
 }
-.restaurants{
+
+.restaurants {
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
     padding: 1.5rem;
     background-color: rgb(230, 230, 230, .5);
-    h4{
+
+    h4 {
         padding-top: 1.8rem;
         padding-bottom: 1.6rem;
         font-weight: 900;
-        font-size: 1.4rem;       
+        font-size: 1.4rem;
     }
-    .card{
+
+    .card {
         display: flex;
         flex-direction: column;
         box-shadow: 0px 15px 10px -13px rgb(215, 215, 215);
+
         //curseur pointeur et grossissement de la case avec un délai ease-in-out
-        &:hover{
+        &:hover {
             cursor: pointer;
             transform: scale(1.003);
-            box-shadow:  0px 15px 10px -13px rgb(200, 200, 200);
+            box-shadow: 0px 15px 10px -13px rgb(200, 200, 200);
             transition: ease-in-out 80ms;
         }
 
         //relative important pour permettre le positionnement de l'étiquette .new
         position: relative;
-        .new{ 
+
+        .new {
             //position de l'étiquette "nouveau" en haut à droite des cards 
             position: absolute;
             top: 0.7rem;
-            right:0.7rem;
+            right: 0.7rem;
 
             //couleur des étiquettes "nouveau"
             background-color: $vert;
@@ -126,29 +140,32 @@ body {
             height: 1.8rem;
             border-radius: 0.1rem;
         }
-        .illustration{
+
+        .illustration {
             object-fit: cover;
             object-position: center;
             max-height: 10rem;
             border-radius: 1rem 1rem 0 0;
 
         }
-        .description{
+
+        .description {
             background-color: white;
             border-radius: 0 0 1rem 1rem;
             padding: 1rem;
             position: relative;
-            .name{
+
+            .name {
                 font-weight: 700;
             }
-            .fa-heart{
+
+            .fa-heart {
                 //position des deux coeurs l'un sur l'autre à droite
                 position: absolute;
-                right:1rem;
-                top:1.4rem;
+                right: 1rem;
+                top: 1.4rem;
             }
-            
+
         }
     }
 }
-

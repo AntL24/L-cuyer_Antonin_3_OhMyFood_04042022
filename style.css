@@ -259,7 +259,9 @@ button:hover {
     display: none;
   }
 }
-.desserts-container, .plats-container, .entrées-container {
+.desserts-container,
+.plats-container,
+.entrées-container {
   animation: progressive-menu 2s forwards;
 }
 
@@ -460,11 +462,15 @@ body {
   transition-duration: 120ms;
   transition-timing-function: ease-in;
 }
-.restaurant-menu h8, .restaurant-menu h9, .restaurant-menu h10 {
+.restaurant-menu h8,
+.restaurant-menu h9,
+.restaurant-menu h10 {
   padding-top: 3rem;
   text-transform: uppercase;
 }
-.restaurant-menu h8:after, .restaurant-menu h9:after, .restaurant-menu h10:after {
+.restaurant-menu h8:after,
+.restaurant-menu h9:after,
+.restaurant-menu h10:after {
   border-bottom: 3px solid #99EDD0;
   content: "";
   display: block;
@@ -475,7 +481,9 @@ body {
   font-weight: 900;
 }
 
-.entrées-container, .plats-container, .desserts-container {
+.entrées-container,
+.plats-container,
+.desserts-container {
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 1rem;
@@ -514,7 +522,8 @@ body {
     display: flex;
     flex-direction: row;
   }
-  .how-to .instructions-cards, .how-to .last-instructions-card {
+  .how-to .instructions-cards,
+.how-to .last-instructions-card {
     width: 20rem;
   }
 }
@@ -543,7 +552,9 @@ body {
     align-items: center;
   }
 
-  .entrées-container, .plats-container, .desserts-container {
+  .entrées-container,
+.plats-container,
+.desserts-container {
     width: 60vw;
   }
 
@@ -565,7 +576,9 @@ body {
     flex-direction: row;
   }
 
-  .entrées-container, .plats-container, .desserts-container {
+  .entrées-container,
+.plats-container,
+.desserts-container {
     width: 30vw;
     margin: 0rem 0.5rem;
   }

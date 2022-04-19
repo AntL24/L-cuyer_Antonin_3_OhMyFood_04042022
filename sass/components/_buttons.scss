@@ -1,18 +1,19 @@
 //utils: variables
-@use "../sass_utils/variables" as *;
+@use "../sass_utils/variables"as *;
 
 
 //=================================================================//
 //Dans les pages de restaurant : boutons avec noms, descriptions, prix
 //des plats (qui s'effacent pour former une ellipse si manque d'espace avec le slider)
 //=================================================================//
-.food-button{
+.food-button {
     background-color: white;
     display: flex;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
     overflow: hidden;
-    .food-name{
+
+    .food-name {
         display: flex;
         flex-direction: column;
         padding: 0.75rem 1rem;
@@ -20,13 +21,15 @@
         //apparait et que l'on manque d'espace
         //avec overflow, text-overflow et white-space.
         overflow: hidden;
-        p{ 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
-    .food-price{
+
+    .food-price {
         padding: 0.75rem 1rem;
         display: flex;
         align-items: flex-end;
@@ -41,7 +44,7 @@
 //(voir fichier _animation pour l'animation en elle-même)
 //========================================================//
 
-.checkbox-slider{
+.checkbox-slider {
     display: grid;
     place-items: center;
     background-color: $vert;
@@ -51,7 +54,8 @@
     border-radius: 0 1rem 1rem 0;
     //shrink à 0 pour conserver la taille du slider
     flex-shrink: 0;
-    i{
+
+    i {
         display: grid;
         place-items: center;
         background-color: white;
@@ -68,22 +72,24 @@
 //bouton "explorer" et "commander"==========//
 //==========================================//
 
- button {
-     padding: 0.5rem 1.1rem;
-     min-height: 2.5rem;
-     font-weight: 600;
-     font-size: 1rem;
-     border-radius: 33px;
-     box-shadow: 0px 15px 10px -13px grey;    
-     background: linear-gradient(to right bottom, $rose, $violet);
-     border: none;
-     color: white;
-     &:hover{
-         cursor:pointer;
-    }  
+button {
+    padding: 0.5rem 1.1rem;
+    min-height: 2.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 33px;
+    box-shadow: 0px 15px 10px -13px grey;
+    background: linear-gradient(to right bottom, $rose, $violet);
+    border: none;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
+
 //bouton "commander" au centre de la page (+margin)
-.buying-button{
+.buying-button {
     display: flex;
     justify-content: center;
     margin: 1.75rem 0;
