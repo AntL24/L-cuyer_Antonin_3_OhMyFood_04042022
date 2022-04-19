@@ -1,18 +1,15 @@
 //utils: variables
-@import "./sass_utils/_variables.scss";
+@use "./sass_utils";
 //base: reset
-@import "./base/_reset.scss";
+@use "./base";
 //layout: header & footer
-@import "./layout/_header";
-@import "./layout/_footer";
+@use "./layout";
 //components: buttons & animation
-@import "./components/_buttons.scss";
-@import "./components/_animations";
-//pages: home & restaurant
-@import "./pages/_home.scss";
-@import "./pages/_restaurant-page.scss";
-//Desktop/tablet responsive
-@import "./pages/_responsive.scss";
+@use "./components";
+//pages: home & restaurant //Desktop/tablet responsive
+@use "./pages";
+
+
 
 
 

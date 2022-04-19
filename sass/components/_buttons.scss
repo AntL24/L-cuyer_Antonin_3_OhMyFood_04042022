@@ -1,3 +1,7 @@
+//utils: variables
+@use "../sass_utils/variables" as *;
+
+
 //=================================================================//
 //Dans les pages de restaurant : boutons avec noms, descriptions, prix
 //des plats (qui s'effacent pour former une ellipse si manque d'espace avec le slider)

@@ -4,6 +4,28 @@
 /*Police Roboto*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+footer section {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  background-color: rgb(72, 72, 72);
+  color: white;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+footer section h5 {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.4rem;
+  padding: 1.5rem 0;
+}
+footer section p {
+  padding: 0.4rem 0;
+}
+footer section p i {
+  padding-right: 0.8rem;
+  width: 2rem;
+}
+
 header h1 {
   font-weight: bold;
   font-family: "Shrikhand", "cursive";
@@ -57,97 +79,6 @@ header .logo-and-back-button .logo {
 header .logo-and-back-button h6 {
   font-size: 1.4rem;
   font-family: "Shrikhand", "cursive";
-}
-
-footer section {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  background-color: rgb(72, 72, 72);
-  color: white;
-  padding-bottom: 2rem;
-  padding-left: 1.5rem;
-}
-footer section h5 {
-  font-family: "Shrikhand", "cursive";
-  font-size: 1.4rem;
-  padding: 1.5rem 0;
-}
-footer section p {
-  padding: 0.4rem 0;
-}
-footer section p i {
-  padding-right: 0.8rem;
-  width: 2rem;
-}
-
-.food-button {
-  background-color: white;
-  display: flex;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
-  overflow: hidden;
-}
-.food-button .food-name {
-  display: flex;
-  flex-direction: column;
-  padding: 0.75rem 1rem;
-  overflow: hidden;
-}
-.food-button .food-name p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.food-button .food-price {
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-  color: rgb(70, 70, 70);
-  font-weight: 700;
-}
-
-.checkbox-slider {
-  display: grid;
-  place-items: center;
-  background-color: #99EDD0;
-  margin-right: -4rem;
-  width: 4rem;
-  aspect-ratio: 1/1;
-  border-radius: 0 1rem 1rem 0;
-  flex-shrink: 0;
-}
-.checkbox-slider i {
-  display: grid;
-  place-items: center;
-  background-color: white;
-  color: #99EDD0;
-  border-radius: 2rem;
-  width: 2rem;
-  aspect-ratio: 1/1;
-  transform: rotate(-170deg);
-}
-
-button {
-  padding: 0.5rem 1.1rem;
-  min-height: 2.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 33px;
-  box-shadow: 0px 15px 10px -13px grey;
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  border: none;
-  color: white;
-}
-button:hover {
-  cursor: pointer;
-}
-
-.buying-button {
-  display: flex;
-  justify-content: center;
-  margin: 1.75rem 0;
 }
 
 .food-button .checkbox-slider {
@@ -280,6 +211,75 @@ button:hover {
     opacity: 1;
   }
 }
+.food-button {
+  background-color: white;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 0px rgb(215, 215, 215);
+  overflow: hidden;
+}
+.food-button .food-name {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+}
+.food-button .food-name p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.food-button .food-price {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  color: rgb(70, 70, 70);
+  font-weight: 700;
+}
+
+.checkbox-slider {
+  display: grid;
+  place-items: center;
+  background-color: #99EDD0;
+  margin-right: -4rem;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 0 1rem 1rem 0;
+  flex-shrink: 0;
+}
+.checkbox-slider i {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: #99EDD0;
+  border-radius: 2rem;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  transform: rotate(-170deg);
+}
+
+button {
+  padding: 0.5rem 1.1rem;
+  min-height: 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 33px;
+  box-shadow: 0px 15px 10px -13px grey;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.buying-button {
+  display: flex;
+  justify-content: center;
+  margin: 1.75rem 0;
+}
+
 * {
   font-family: "Roboto", "sans-serif";
 }
@@ -412,76 +412,6 @@ body {
   top: 1.4rem;
 }
 
-.background-img {
-  margin-bottom: -2rem;
-}
-
-.restaurant-img {
-  object-fit: cover;
-  object-position: center;
-  max-height: 25vh;
-  width: 100%;
-}
-
-.restaurant-menu {
-  position: relative;
-  border-radius: 2rem 2rem 0 0;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(230, 230, 230);
-  padding: 1rem;
-}
-.restaurant-menu h7 {
-  font-size: 1.4rem;
-  font-family: "Shrikhand", "cursive";
-}
-.restaurant-menu .restaurant-name {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
-}
-.restaurant-menu .restaurant-name .fa-heart {
-  position: absolute;
-  right: 1rem;
-  top: 1.4rem;
-}
-.restaurant-menu .restaurant-name .fa-solid {
-  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 0;
-}
-.restaurant-menu .restaurant-name .fa-solid:hover {
-  opacity: 1;
-  transition-duration: 120ms;
-  transition-timing-function: ease-in;
-}
-.restaurant-menu h8, .restaurant-menu h9, .restaurant-menu h10 {
-  padding-top: 1rem;
-  text-transform: uppercase;
-}
-.restaurant-menu h8:after, .restaurant-menu h9:after, .restaurant-menu h10:after {
-  border-bottom: 3px solid #99EDD0;
-  content: "";
-  display: block;
-  padding-top: 0.3rem;
-  width: 2.5rem;
-}
-.restaurant-menu .bold-title {
-  font-weight: 900;
-}
-
-.entrées-container, .plats-container, .desserts-container {
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-}
-
 @media only screen and (min-width: 650px) and (max-width: 1000px) {
   .how-to {
     align-items: center;
@@ -543,8 +473,6 @@ body {
 
   .entrées-container, .plats-container, .desserts-container {
     width: 60vw;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 
   .food-button {
@@ -556,7 +484,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -567,9 +495,79 @@ body {
 
   .entrées-container, .plats-container, .desserts-container {
     width: 30vw;
-    height: 30vh;
-    margin: 1rem 0.5rem;
+    margin: 0rem 0.5rem;
   }
+}
+.background-img {
+  margin-bottom: -2rem;
+}
+
+.restaurant-img {
+  object-fit: cover;
+  object-position: center;
+  max-height: 25vh;
+  width: 100%;
+}
+
+.restaurant-menu {
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
+}
+.restaurant-menu h7 {
+  font-size: 1.4rem;
+  font-family: "Shrikhand", "cursive";
+}
+.restaurant-menu .restaurant-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+.restaurant-menu .restaurant-name .fa-heart {
+  position: absolute;
+  right: 1rem;
+  top: 1.4rem;
+}
+.restaurant-menu .restaurant-name .fa-solid {
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.restaurant-menu .restaurant-name .fa-solid:hover {
+  opacity: 1;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
+}
+.restaurant-menu h8, .restaurant-menu h9, .restaurant-menu h10 {
+  padding-top: 3rem;
+  text-transform: uppercase;
+}
+.restaurant-menu h8:after, .restaurant-menu h9:after, .restaurant-menu h10:after {
+  border-bottom: 3px solid #99EDD0;
+  content: "";
+  display: block;
+  padding-top: 0.3rem;
+  width: 2.5rem;
+}
+.restaurant-menu .bold-title {
+  font-weight: 900;
+}
+
+.entrées-container, .plats-container, .desserts-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

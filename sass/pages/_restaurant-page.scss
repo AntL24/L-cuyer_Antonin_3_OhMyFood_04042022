@@ -1,3 +1,6 @@
+//utils: variables
+@use "../sass_utils/variables" as *;
+
 .background-img{
     //marge négative pour attirer la section restaurant-menu au-dessus de l'image
     margin-bottom: -2rem;
@@ -67,10 +70,11 @@
     }
     h8,h9,h10{
         //Entrées, plats, desserts en lettres capitale et pseudo-élément after pour afficher une border bottom partielle
-        padding-top: 1rem;
+        padding-top: 3rem;
         text-transform:uppercase;
     }
     h8:after, h9:after, h10:after {
+        //trait vert sous entrée/plats/desserts
         border-bottom: 3px solid $vert;
         content: '';
         display: block;
@@ -83,6 +87,8 @@
 }
 //container qui sert à décaler les animations de plats/dessert/entrées
 .entrées-container, .plats-container, .desserts-container{
+    padding-top:1rem;
+    padding-bottom: 1rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
