@@ -169,7 +169,7 @@ button:hover {
   cursor: pointer;
 }
 
-.fa-solid {
+.fa-solid.fa-heart {
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -178,7 +178,7 @@ button:hover {
   transition-duration: 120ms;
   transition-timing-function: ease-in;
 }
-.fa-solid:hover {
+.fa-solid.fa-heart:hover {
   opacity: 1;
   transition-duration: 120ms;
   transition-timing-function: ease-in;

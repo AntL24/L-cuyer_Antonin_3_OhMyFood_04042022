@@ -72,6 +72,9 @@
         //position relative pour positionner le coeur par rapport au nom du restaurant
         position: relative;
     }
+    
+    //trois classes successives pour augmenter la spécificité
+    //sinon, les nouvelles règles ne sont pas appliquées.
 
     .restaurant-menu .restaurant-name .fa-regular {
         //position des deux coeurs l'un sur l'autre à droite
