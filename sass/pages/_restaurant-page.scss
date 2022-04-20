@@ -31,7 +31,7 @@
 
     padding: 1rem;
 
-    h7 {
+    .headline_font {
         font-size: 1.4rem;
         font-family: $headers-font;
     }
@@ -71,17 +71,13 @@
         }
     }
 
-    h8,
-    h9,
-    h10 {
+    .meal_section_font {
         //Entrées, plats, desserts en lettres capitale et pseudo-élément after pour afficher une border bottom partielle
         padding-top: 3rem;
         text-transform: uppercase;
     }
 
-    h8:after,
-    h9:after,
-    h10:after {
+    .meal_section_font:after{
         //trait vert sous entrée/plats/desserts
         border-bottom: 3px solid $vert;
         content: '';

@@ -434,7 +434,7 @@ body {
   background-color: rgb(230, 230, 230);
   padding: 1rem;
 }
-.restaurant-menu h7 {
+.restaurant-menu .headline_font {
   font-size: 1.4rem;
   font-family: "Shrikhand", "cursive";
 }
@@ -462,15 +462,11 @@ body {
   transition-duration: 120ms;
   transition-timing-function: ease-in;
 }
-.restaurant-menu h8,
-.restaurant-menu h9,
-.restaurant-menu h10 {
+.restaurant-menu .meal_section_font {
   padding-top: 3rem;
   text-transform: uppercase;
 }
-.restaurant-menu h8:after,
-.restaurant-menu h9:after,
-.restaurant-menu h10:after {
+.restaurant-menu .meal_section_font:after {
   border-bottom: 3px solid #99EDD0;
   content: "";
   display: block;
