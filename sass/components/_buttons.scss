@@ -52,7 +52,7 @@
     width: 4rem;
     aspect-ratio: 1/1;
     border-radius: 0 1rem 1rem 0;
-    //shrink à 0 pour conserver la taille du slider
+    //shrink à 0 pour conserver la taille du slider quand on resize la fenêtre
     flex-shrink: 0;
 
     i {
@@ -62,13 +62,13 @@
         color: $vert;
         border-radius: 2rem;
         width: 2rem;
+        //aspect ratio pour éviter d'avoir à régler la height
         aspect-ratio: 1/1;
-        transform: rotate(-170deg);
     }
 }
 
 //==========================================//
-//=Sur les deux styles de pages : forme des=//
+//Sur les deux styles de pages : forme des==//
 //bouton "explorer" et "commander"==========//
 //==========================================//
 

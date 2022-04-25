@@ -37,6 +37,7 @@ body {
         gap: 1.3rem;
 
         li:before {
+            //pseudo élément pour afficher le counter avant chaque li de ol
             content: counter(steps);
             counter-increment: steps;
 

@@ -13,25 +13,29 @@
         transition: all 0.5s ease-in-out;
 
         i {
-            transform: rotate(240deg);
+            transform: rotate(-360deg);
             //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
-            transition: all 0.5s ease-in-out;
+            tranition: all 0.5s ease-in-out;
         }
     }
 
     //animation checkbox quand on passe la souris où que ce soit sur le plat
     &:hover .checkbox-slider {
-        transition: all 0.5s ease-in-out;
         margin-right: 0;
     }
-
     &:hover i {
-        transition: all 0.5s ease-in-out;
-        transform: rotate(0deg);
+        animation: button-slider-rotation 500ms ease-out forwards;
     }
-
     &:hover {
         cursor: pointer;
+    }
+}
+@keyframes button-slider-rotation{
+    0% {
+       transform: rotate(-360deg)
+    }
+    100% {
+        transform: rotate(360deg)
     }
 }
 
@@ -40,8 +44,8 @@
 //====================================================//
 
 .fa-solid.fa-heart {
-    //background-clip text permet de sélectionner l'icone
-    //uniquement pour appliquer background-image sur le coeur.
+    //background-clip text permet de sélectionner uniquement l'icone
+    //pour appliquer background-image sur le coeur.
     //Color transparent nécessaire (sinon, c'est la couleur de
     //l'icone ou du texte qui apparait)
     background-image: linear-gradient(to top right, $rose, $violet);
@@ -83,7 +87,7 @@ button:hover {
     width: 100%;
     background-color: white;
     position: fixed;
-    //inset pour couvrir l'intégralité de l'écran
+    //inset pour couvrir l'intégralité de l'écran (plus rapide que top, bottom, right, left)
     inset: 0;
     z-index: 2;
     align-items: center;
@@ -94,7 +98,7 @@ button:hover {
     .lettre {
         z-index: 2;
         animation: bouncer 0.5s cubic-bezier(.19, .57, .3, .98) infinite alternate;
-        //gradient appliqué au texte de l'écran de chargement
+        //couleur et font appliquées au texte de l'écran de chargement
         font-family: $headers-font;
         color: $violet;
         letter-spacing: 1rem;

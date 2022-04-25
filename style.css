@@ -126,7 +126,6 @@ header .logo-and-back-button h6 {
   border-radius: 2rem;
   width: 2rem;
   aspect-ratio: 1/1;
-  transform: rotate(-170deg);
 }
 
 button {
@@ -154,21 +153,27 @@ button:hover {
   transition: all 0.5s ease-in-out;
 }
 .food-button .checkbox-slider i {
-  transform: rotate(240deg);
-  transition: all 0.5s ease-in-out;
+  transform: rotate(-360deg);
+  tranition: all 0.5s ease-in-out;
 }
 .food-button:hover .checkbox-slider {
-  transition: all 0.5s ease-in-out;
   margin-right: 0;
 }
 .food-button:hover i {
-  transition: all 0.5s ease-in-out;
-  transform: rotate(0deg);
+  animation: button-slider-rotation 500ms ease-out forwards;
 }
 .food-button:hover {
   cursor: pointer;
 }
 
+@keyframes button-slider-rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fa-solid.fa-heart {
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
