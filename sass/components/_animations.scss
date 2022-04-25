@@ -11,12 +11,6 @@
     .checkbox-slider {
         //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
         transition: all 0.5s ease-in-out;
-
-        i {
-            transform: rotate(-360deg);
-            //transition pour que le retour à la position initiale *après le hover* se fasse progressivement
-            tranition: all 0.5s ease-in-out;
-        }
     }
 
     //animation checkbox quand on passe la souris où que ce soit sur le plat
